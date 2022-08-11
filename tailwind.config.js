@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -13,8 +15,12 @@ module.exports = {
           purple: "#F2E4FD",
           deepBlue: "#091572",
           lightBlue: "#0200B6",
+          darkBlue: "#1E1147",
           orange: "#FF9200",
         }
+      },
+      fontFamily: {
+        sans: ["'Nunito Sans'", ...defaultTheme.fontFamily.sans]
       }
     },
   },
