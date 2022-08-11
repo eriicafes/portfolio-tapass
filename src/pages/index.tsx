@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Hero } from '../sections/Hero'
 
 const Home: NextPage = () => {
   return (
@@ -9,8 +10,8 @@ const Home: NextPage = () => {
         <meta name="description" content="Tapass project" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen w-screen text-3xl font-medium flex items-center justify-center">
-        Hello world in tailwindcss
+      <main>
+        <Hero />
       </main>
     </div>
   )
