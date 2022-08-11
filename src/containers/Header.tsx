@@ -1,4 +1,5 @@
 import { MenuAlt4Icon } from "@heroicons/react/solid";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { Tapass } from "../components/icons/Tapass";
@@ -10,7 +11,7 @@ export function Header() {
 
   return (
     <div className="">
-      <div className="px-4 sm:px-8 md:px-16 py-4 flex justify-between items-center">
+      <div className="px-4 sm:px-6 md:px-10 py-4 flex justify-between items-center">
         {/* logo */}
         <Tapass />
 
@@ -36,13 +37,18 @@ export function Header() {
         </div>
       </div>
       {/* mobile nav links */}
-      {showMobileNav || true && (
-        <ul className="lg:hidden py-8 flex flex-col items-center space-y-8 font-semibold">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/">About Us</NavLink>
-          <NavLink href="/">The Problem</NavLink>
-          <NavLink href="/">Products</NavLink>
-        </ul>
+      {showMobileNav && (
+        <motion.ul
+          className="lg:hidden py-8 flex flex-col items-center space-y-8 font-semibold"
+          initial="initial"
+          animate="animate"
+          variants={mobileNavVariant}
+        >
+          <MobileNavLink href="/">Home</MobileNavLink>
+          <MobileNavLink href="/">About Us</MobileNavLink>
+          <MobileNavLink href="/">The Problem</MobileNavLink>
+          <MobileNavLink href="/">Products</MobileNavLink>
+        </motion.ul>
       )}
     </div>
   )
@@ -60,5 +66,38 @@ function NavLink({ href, children }: NavLinkProps) {
         <a>{children}</a>
       </Link>
     </li>
+  )
+}
+
+const mobileNavVariant: Variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    }
+  }
+}
+
+const mobileNavLinksVariant: Variants = {
+  initial: {
+    x: -300
+  },
+  animate: {
+    x: 0
+  }
+}
+
+function MobileNavLink({ href, children }: NavLinkProps) {
+  return (
+    <motion.li
+      variants={mobileNavLinksVariant}
+    >
+      <Link href={href}>
+        <a>{children}</a>
+      </Link>
+    </motion.li>
   )
 }
