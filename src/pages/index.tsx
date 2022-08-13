@@ -19,6 +19,7 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <Info />
+        <div className="h-[400px] bg-blue-100"></div>
       </main>
     </div>
   )
