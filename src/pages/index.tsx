@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Features } from '../sections/Features'
 import { Hero } from '../sections/Hero'
 import { Info } from '../sections/Info'
 
@@ -19,7 +20,9 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <Info />
-        <div className="h-[400px] bg-blue-100"></div>
+        <Features />
+        <div className="h-[400px] bg-white"></div>
+        <div className="h-[400px] bg-product-darkBlue"></div>
       </main>
     </div>
   )
