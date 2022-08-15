@@ -1,4 +1,5 @@
-import Image from "next/image"
+import { InfoImage } from "../components/info/InfoImage"
+import { OnlyChildren } from "../types/common"
 
 export function Info() {
   return (
@@ -7,12 +8,12 @@ export function Info() {
         {/* cards */}
         <div className="flex space-x-6">
           <div className="flex flex-col space-y-6">
-            <CardImage src="/images/rectangle-24.png" alt="rectangle 24" />
-            <CardImage src="/images/rectangle-31.png" alt="rectangle 31" />
+            <InfoImage src="/images/rectangle-24.png" alt="rectangle 24" />
+            <InfoImage src="/images/rectangle-31.png" alt="rectangle 31" />
           </div>
           <div className="flex flex-col space-y-6 -translate-y-20">
-            <CardImage src="/images/rectangle-29.png" alt="rectangle 29" />
-            <CardImage src="/images/rectangle-30.png" alt="rectangle 30" />
+            <InfoImage src="/images/rectangle-29.png" alt="rectangle 29" />
+            <InfoImage src="/images/rectangle-30.png" alt="rectangle 30" />
           </div>
         </div>
         {/* cards end */}
@@ -27,21 +28,6 @@ export function Info() {
   )
 }
 
-type CardImageProps = {
-  src: string,
-  alt: string
-}
-
-const CardImage = ({ src, alt }: CardImageProps) => (
-  <div className="w-32 h-40 rounded-xl overflow-hidden">
-    <Image width={128} height={160} src={src} alt={alt} />
-  </div>
-)
-
-type PopSpanProps = {
-  children: React.ReactNode
-}
-
-const PopSpan = ({ children }: PopSpanProps) => (
+const PopSpan = ({ children }: OnlyChildren) => (
   <span className="text-product-lightOrange font-black text-3xl px-2 align-middle">{children}</span>
 )
