@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Features } from '../sections/Features'
 import { Hero } from '../sections/Hero'
 import { Info } from '../sections/Info'
+import { Reviews } from '../sections/Reviews'
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
         <Hero />
         <Info />
         <Features />
-        <div className="h-[400px] bg-white"></div>
+        <Reviews />
         <div className="h-[400px] bg-product-darkBlue"></div>
       </main>
     </div>
