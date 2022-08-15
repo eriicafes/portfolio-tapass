@@ -16,7 +16,7 @@ export function Features() {
         <FeatureCard title="Tax Compliance" illustration="/images/illustration-3.svg" />
       </div>
       <div className="md:w-[672px] md:mx-auto mt-12 flex justify-center md:justify-end">
-        <p className="text-xs text-product-orange">Read more</p>
+        <p className="text-sm md:text-xs text-product-orange">Read more</p>
       </div>
     </div>
   )
