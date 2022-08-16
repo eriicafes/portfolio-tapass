@@ -16,7 +16,7 @@ export const FeatureCard = ({ title, illustration }: Props) => {
         <p className="text-xl font-bold text-zinc-600">{firstWord} <br /> {restWords}</p>
       </div>
       <div className="flex justify-end">
-        <Image src={illustration} width={180} height={120} />
+        <Image src={illustration} alt={title} width={180} height={120} />
       </div>
     </div>
   )

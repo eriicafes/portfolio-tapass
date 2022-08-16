@@ -18,7 +18,7 @@ export function Hero() {
           </div>
         </div>
         <div className="md:w-2/5 flex justify-center md:justify-end pt-16 md:pt-10">
-          <Image src="/images/hero-woman.png" width={512} height={476} />
+          <Image src="/images/hero-woman.png" alt="hero woman" width={512} height={476} />
         </div>
       </div>
     </div>

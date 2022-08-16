@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Fragment } from "react";
 import { FullLeftArrow } from "../components/icons/FullLeftArrow";
 import { FullRightArrow } from "../components/icons/FullRightArrow";
 import { QuotesClose } from "../components/icons/QuotesClose";
@@ -19,24 +20,24 @@ export function Reviews() {
 
         {/* customer */}
         <div className="flex-auto flex flex-col items-center">
-          <Image className="rounded-full" src="/images/customer-care-woman.png" width={96} height={96} />
+          <Image className="rounded-full" src="/images/customer-care-woman.png" alt="customer care woman" width={96} height={96} />
 
           <h5 className="mt-6 font-bold">Nancy Nyongo</h5>
           <p className="font-light text-sm">Nairobi, Kenya</p>
 
           <div className="px-12 py-1 mt-4 flex space-x-1">
-            {Array.from({ length: 5 }).map(() => (
-              <Star />
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} />
             ))}
           </div>
 
           <p className="relative mt-12 md:max-w-lg lg:max-w-4xl font-light">
             <QuotesOpen className="absolute -top-10 -left-20 hidden md:block" />
-            {splitReviewText(reviewText, [17, 12, 9]).lines.map((line) => (
-              <>
+            {splitReviewText(reviewText, [17, 12, 9]).lines.map((line, i) => (
+              <Fragment key={i}>
                 <span className="">{line}</span>{" "}
                 <br className="hidden md:block" />
-              </>
+              </Fragment>
             ))}
             <QuotesClose className="absolute -bottom-8 -right-8 hidden md:block" />
           </p>

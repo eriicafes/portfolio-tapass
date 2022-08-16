@@ -49,10 +49,10 @@ export function Footer() {
       {/* mobile area */}
       <div className="pt-2 flex flex-col mx-auto sm:mx-0 space-y-5 pl-4 mt-20 sm:mt-0 col-span-2 sm:col-span-1">
         <div className="w-full">
-          <Image src="/images/google-play.svg" width={160} height={48} />
+          <Image src="/images/google-play.svg" alt="google play" width={160} height={48} />
         </div>
         <div className="w-full">
-          <Image src="/images/appstore.svg" width={160} height={52} />
+          <Image src="/images/appstore.svg" alt="applestore" width={160} height={52} />
         </div>
       </div>
     </div>
