@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Tapass</title>
         <meta name="description" content="Tapass project" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/logo.png" />
       </Head>
       <main>
         <Hero />
